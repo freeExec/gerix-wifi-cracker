@@ -9,10 +9,10 @@ import glob
 import sqlite3
 import binascii
 
-from qt import *
+from PyQt4.QtGui import *
 from threading import Thread
 
-from gerix_gui import *
+from gerix_gui4 import *
 
 from gerix_config import *
 
@@ -76,7 +76,7 @@ class RetardedKill(Thread):
 # For the callbacks function
 # extend Main_window class (that contains the GUI)
 #
-class Main_window_ex(Main_window):
+class Main_window_ex(Ui_Main_window):
 
     #
     # Print the output in the GUI with a timestamp and with exit_code
@@ -1108,13 +1108,15 @@ def main():
 
     app = QApplication(sys.argv)
     main_window = Main_window_ex()
-    app.setMainWidget(main_window)
+    #app.setMainWidget(main_window)
 
     # initialize config directory
     init_config_dir()
 
     # change working directory
     os.chdir(config_dir)
+
+    main_window.setupUi(main_window)
 
     # performs various checks
     check_all()

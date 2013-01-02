@@ -36,6 +36,8 @@ import commands
 # home_dir   = os.getenv('HOME')
 #
 home_dir = os.getenv('HOME')
+if home_dir is None:
+    home_dir = os.getenv('USERPROFILE')
 
 #
 # Config directory:
