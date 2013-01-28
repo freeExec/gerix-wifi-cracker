@@ -76,7 +76,7 @@ class RetardedKill(Thread):
 # For the callbacks function
 # extend Main_window class (that contains the GUI)
 #
-class Main_window_ex(Ui_Main_window):
+class Main_window_ex(QMainWindow, Ui_Main_window):
 
     #
     # Print the output in the GUI with a timestamp and with exit_code
@@ -983,6 +983,7 @@ class Main_window_ex(Ui_Main_window):
     # Initializer
     #
     def init(self):
+        self.setupUi(self)
         pass
 
     #
@@ -1116,16 +1117,18 @@ def main():
     # change working directory
     os.chdir(config_dir)
 
+    # init main window
+    #main_window.init()
     main_window.setupUi(main_window)
+    main_window.show()
+    #Ui_Main_window.setupUi(main_window)
+
 
     # performs various checks
     check_all()
 
     # config init function
     config_init()
-
-    # init main window
-    main_window.init()
     
     # fill the GUI
     main_window.fill_input_fields()
