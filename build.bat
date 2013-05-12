@@ -1,0 +1,1 @@
+@"d:\Program Files 2\Python27\Lib\site-packages\PyQt4\pyuic4.bat" gerix_gui4.ui > gerix_gui4.py

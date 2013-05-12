@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
+    <width>670</width>
     <height>642</height>
    </rect>
   </property>
@@ -88,7 +88,7 @@
     <item row="0" column="0" colspan="3">
      <widget class="QTabWidget" name="tabWidget2">
       <property name="currentIndex">
-       <number>4</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -188,8 +188,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>440</width>
-             <height>330</height>
+             <width>628</width>
+             <height>406</height>
             </rect>
            </property>
            <attribute name="label">
@@ -416,7 +416,10 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
                <enum>QAbstractItemView::SelectRows</enum>
               </property>
               <property name="showGrid">
-               <bool>false</bool>
+               <bool>true</bool>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::SolidLine</enum>
               </property>
               <property name="wordWrap">
                <bool>false</bool>
@@ -424,20 +427,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               <property name="rowCount">
                <number>2</number>
               </property>
-              <property name="columnCount">
-               <number>5</number>
-              </property>
-              <attribute name="horizontalHeaderVisible">
-               <bool>false</bool>
-              </attribute>
-              <attribute name="verticalHeaderVisible">
-               <bool>false</bool>
-              </attribute>
               <attribute name="verticalHeaderDefaultSectionSize">
                <number>20</number>
-              </attribute>
-              <attribute name="verticalHeaderHighlightSections">
-               <bool>true</bool>
               </attribute>
               <row/>
               <row/>
@@ -469,7 +460,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QTableWidget" name="tableWidget">
+             <widget class="QTableWidget" name="table_networks">
               <property name="maximumSize">
                <size>
                 <width>5000</width>
@@ -720,7 +711,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>208</width>
+             <width>611</width>
              <height>402</height>
             </rect>
            </property>
@@ -1005,8 +996,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>192</width>
-             <height>142</height>
+             <width>628</width>
+             <height>352</height>
             </rect>
            </property>
            <attribute name="label">
@@ -1196,7 +1187,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>606</width>
+             <width>628</width>
              <height>379</height>
             </rect>
            </property>
@@ -1587,8 +1578,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>400</width>
-             <height>144</height>
+             <width>628</width>
+             <height>325</height>
             </rect>
            </property>
            <attribute name="label">
