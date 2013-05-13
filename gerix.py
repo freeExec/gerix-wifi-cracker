@@ -777,8 +777,8 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
         dump_file = dump_file.split('\n')        
 
         for mac in dump_file:
-            self.combo_wep_mac_cfrag.insertItem(mac)
-            self.combo_wpa_mac_hand.insertItem(mac)
+            self.combo_wep_mac_cfrag.insertItem(0, mac)
+            self.combo_wpa_mac_hand.insertItem(0, mac)
 
     #
     # Add cracked key to database
@@ -791,11 +791,11 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
 
         # insert a row in the database
         self.table_database.insertRow(0)
-        self.table_database.setText(0, 0, self.essid)
-        self.table_database.setText(0, 1, self.ac)
-        self.table_database.setText(0, 2, self.canale)
-        self.table_database.setText(0, 3, key)
-        self.table_database.setText(0, 4, key_to_ascii(key))
+        self.table_database.setText(0, 0, QtGui.QTableWidgetItem(self.essid, 0))
+        self.table_database.setText(0, 1, QtGui.QTableWidgetItem(self.ac, 0))
+        self.table_database.setText(0, 2, QtGui.QTableWidgetItem(self.canale, 0))
+        self.table_database.setText(0, 3, QtGui.QTableWidgetItem(key, 0))
+        self.table_database.setText(0, 4, QtGui.QTableWidgetItem(key_to_ascii(key), 0))
         
         
     #
