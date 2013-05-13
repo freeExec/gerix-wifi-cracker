@@ -711,7 +711,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>611</width>
+             <width>208</width>
              <height>402</height>
             </rect>
            </property>
@@ -996,8 +996,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>628</width>
-             <height>352</height>
+             <width>192</width>
+             <height>142</height>
             </rect>
            </property>
            <attribute name="label">
@@ -1187,8 +1187,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>628</width>
-             <height>379</height>
+             <width>492</width>
+             <height>307</height>
             </rect>
            </property>
            <attribute name="label">
@@ -1578,8 +1578,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>628</width>
-             <height>325</height>
+             <width>400</width>
+             <height>144</height>
             </rect>
            </property>
            <attribute name="label">
@@ -2214,22 +2214,6 @@ http://www.backtrack.it/~crossbower/</string>
    </hints>
   </connection>
   <connection>
-   <sender>spin_wpa_deauth_hand</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>Main_window</receiver>
-   <slot>slot_line_wpa_deauth_hand()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>button_random_mac</sender>
    <signal>clicked()</signal>
    <receiver>Main_window</receiver>
@@ -2354,6 +2338,22 @@ http://www.backtrack.it/~crossbower/</string>
     <hint type="destinationlabel">
      <x>20</x>
      <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>table_interfaces</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>Main_window</receiver>
+   <slot>slot_interface_selected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>320</y>
     </hint>
    </hints>
   </connection>
