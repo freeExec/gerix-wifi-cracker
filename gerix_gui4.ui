@@ -18,16 +18,25 @@
   </property>
   <widget class="QWidget" name="widget">
    <layout class="QGridLayout">
-    <item row="2" column="1">
-     <widget class="QLabel" name="pixmapLabel1">
-      <property name="pixmap">
-       <pixmap>gerix.png</pixmap>
+    <item row="1" column="0" colspan="3">
+     <widget class="QTextEdit" name="text_output">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <property name="scaledContents">
+      <property name="maximumSize">
+       <size>
+        <width>32767</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="readOnly">
        <bool>true</bool>
       </property>
-      <property name="wordWrap">
-       <bool>false</bool>
+      <property name="text" stdset="0">
+       <string/>
       </property>
      </widget>
     </item>
@@ -63,25 +72,16 @@
       </property>
      </spacer>
     </item>
-    <item row="1" column="0" colspan="3">
-     <widget class="QTextEdit" name="text_output">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+    <item row="2" column="1">
+     <widget class="QLabel" name="pixmapLabel1">
+      <property name="pixmap">
+       <pixmap>gerix.png</pixmap>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>32767</width>
-        <height>100</height>
-       </size>
-      </property>
-      <property name="readOnly">
+      <property name="scaledContents">
        <bool>true</bool>
       </property>
-      <property name="text" stdset="0">
-       <string/>
+      <property name="wordWrap">
+       <bool>false</bool>
       </property>
      </widget>
     </item>
@@ -94,53 +94,57 @@
        <attribute name="title">
         <string>Welcome</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="0" column="1">
-         <widget class="QLabel" name="pixmapLabel2">
-          <property name="pixmap">
-           <pixmap>gerix_wifi_cracker.png</pixmap>
-          </property>
-          <property name="scaledContents">
-           <bool>true</bool>
-          </property>
-          <property name="wordWrap">
-           <bool>false</bool>
-          </property>
-         </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_25">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="spacer3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>101</width>
+              <height>41</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="pixmapLabel2">
+            <property name="pixmap">
+             <pixmap>gerix_wifi_cracker.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacer4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>21</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
-        <item row="0" column="0">
-         <spacer name="spacer3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Expanding</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>101</width>
-            <height>41</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="0" column="2">
-         <spacer name="spacer4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Expanding</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>21</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="0" colspan="3">
+        <item>
          <widget class="QLabel" name="textLabel1">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -177,13 +181,13 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
        <attribute name="title">
         <string>Configuration</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_24">
+        <item>
          <widget class="QToolBox" name="toolBox3_2">
           <property name="currentIndex">
            <number>0</number>
           </property>
-          <widget class="QWidget" name="page1">
+          <widget class="QWidget" name="page1_2">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -195,8 +199,110 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
            <attribute name="label">
             <string>General configurations and network selection.</string>
            </attribute>
-           <layout class="QGridLayout">
-            <item row="3" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_13">
+              <item>
+               <widget class="QLabel" name="textLabel3_4_4">
+                <property name="text">
+                 <string>Directory for session files (logs, .cap, ...):</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QLineEdit" name="line_gath_logs"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="button_gath_clean">
+                  <property name="text">
+                   <string>Clean old session files</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="textLabel3_5_6_2_2">
+              <property name="text">
+               <string>Select the &lt;b&gt;interface&lt;/b&gt;:</string>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="table_interfaces">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>85</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>5000</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::SingleSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::SolidLine</enum>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+              <property name="rowCount">
+               <number>2</number>
+              </property>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>20</number>
+              </attribute>
+              <row/>
+              <row/>
+              <column>
+               <property name="text">
+                <string>Interface</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>MAC</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Chipset</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Driver</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Mode</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
              <layout class="QHBoxLayout">
               <item>
                <widget class="QPushButton" name="button_reload_interfaces">
@@ -221,7 +327,72 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               </item>
              </layout>
             </item>
-            <item row="6" column="0">
+            <item>
+             <widget class="QLabel" name="textLabel3_5_6_2">
+              <property name="text">
+               <string>Select the &lt;b&gt;target network&lt;/b&gt;:</string>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="table_networks">
+              <property name="maximumSize">
+               <size>
+                <width>5000</width>
+                <height>5000</height>
+               </size>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::SingleSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+              <property name="rowCount">
+               <number>5</number>
+              </property>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>20</number>
+              </attribute>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <column>
+               <property name="text">
+                <string>Essid</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Bssid</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Channel</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Signal</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Enc</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
              <layout class="QHBoxLayout">
               <item>
                <widget class="QLabel" name="textLabel1_2">
@@ -351,169 +522,6 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               </item>
              </layout>
             </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="textLabel3_5_6_2_2">
-              <property name="text">
-               <string>Select the &lt;b&gt;interface&lt;/b&gt;:</string>
-              </property>
-              <property name="wordWrap">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0">
-             <layout class="QGridLayout">
-              <item row="0" column="0" colspan="2">
-               <widget class="QLabel" name="textLabel3_4_4">
-                <property name="text">
-                 <string>Directory for session files (logs, .cap, ...):</string>
-                </property>
-                <property name="wordWrap">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLineEdit" name="line_gath_logs"/>
-              </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="button_gath_clean">
-                <property name="text">
-                 <string>Clean old session files</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="textLabel3_5_6_2">
-              <property name="text">
-               <string>Select the &lt;b&gt;target network&lt;/b&gt;:</string>
-              </property>
-              <property name="wordWrap">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QTableWidget" name="table_interfaces">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>85</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>5000</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="selectionMode">
-               <enum>QAbstractItemView::SingleSelection</enum>
-              </property>
-              <property name="selectionBehavior">
-               <enum>QAbstractItemView::SelectRows</enum>
-              </property>
-              <property name="showGrid">
-               <bool>true</bool>
-              </property>
-              <property name="gridStyle">
-               <enum>Qt::SolidLine</enum>
-              </property>
-              <property name="wordWrap">
-               <bool>false</bool>
-              </property>
-              <property name="rowCount">
-               <number>2</number>
-              </property>
-              <attribute name="verticalHeaderDefaultSectionSize">
-               <number>20</number>
-              </attribute>
-              <row/>
-              <row/>
-              <column>
-               <property name="text">
-                <string>Interface</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>MAC</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Chipset</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Driver</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Mode</string>
-               </property>
-              </column>
-             </widget>
-            </item>
-            <item row="5" column="0">
-             <widget class="QTableWidget" name="table_networks">
-              <property name="maximumSize">
-               <size>
-                <width>5000</width>
-                <height>5000</height>
-               </size>
-              </property>
-              <property name="selectionMode">
-               <enum>QAbstractItemView::SingleSelection</enum>
-              </property>
-              <property name="selectionBehavior">
-               <enum>QAbstractItemView::SelectRows</enum>
-              </property>
-              <property name="wordWrap">
-               <bool>false</bool>
-              </property>
-              <property name="rowCount">
-               <number>5</number>
-              </property>
-              <attribute name="verticalHeaderDefaultSectionSize">
-               <number>20</number>
-              </attribute>
-              <row/>
-              <row/>
-              <row/>
-              <row/>
-              <row/>
-              <column>
-               <property name="text">
-                <string>Essid</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Bssid</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Channel</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Signal</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Enc</string>
-               </property>
-              </column>
-             </widget>
-            </item>
            </layout>
           </widget>
          </widget>
@@ -524,11 +532,21 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
        <attribute name="title">
         <string>WEP</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="1" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_23">
+        <item>
+         <widget class="QLabel" name="textLabel4_4_3">
+          <property name="text">
+           <string>&lt;h2&gt;Welcome in WEP Attacks Control Panel&lt;/h2&gt;</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QToolBox" name="toolBox2_2">
           <property name="currentIndex">
-           <number>2</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="page1">
            <property name="geometry">
@@ -604,24 +622,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
            <attribute name="label">
             <string>WEP Attacks (no-client)</string>
            </attribute>
-           <layout class="QGridLayout">
-            <item row="5" column="0">
-             <spacer name="spacer22_2_2">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Expanding</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>41</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
              <widget class="QGroupBox" name="verticalGroupBox_3">
               <property name="title">
                <string>ChopChop attack</string>
@@ -661,7 +663,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               </layout>
              </widget>
             </item>
-            <item row="4" column="0">
+            <item>
              <widget class="QGroupBox" name="verticalGroupBox_4">
               <property name="title">
                <string>Fragmentation attack</string>
@@ -703,6 +705,22 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
                </item>
               </layout>
              </widget>
+            </item>
+            <item>
+             <spacer name="spacer22_2_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>41</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </widget>
@@ -959,24 +977,14 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
           </widget>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="textLabel4_4_3">
-          <property name="text">
-           <string>&lt;h2&gt;Welcome in WEP Attacks Control Panel&lt;/h2&gt;</string>
-          </property>
-          <property name="wordWrap">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="TabPage">
        <attribute name="title">
         <string>WPA</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_22">
+        <item>
          <widget class="QLabel" name="textLabel4_4_2_3">
           <property name="text">
            <string>&lt;h2&gt;Welcome in WPA Attacks Control Panel&lt;/h2&gt;</string>
@@ -986,10 +994,10 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item>
          <widget class="QToolBox" name="toolBox4_2">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="page2">
            <property name="geometry">
@@ -1166,8 +1174,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
        <attribute name="title">
         <string>Fake AP</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_21">
+        <item>
          <widget class="QLabel" name="textLabel4_4_2_3_2">
           <property name="text">
            <string>&lt;h2&gt;Welcome in Fake Access Point Control Panel&lt;/h2&gt;</string>
@@ -1177,7 +1185,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item>
          <widget class="QToolBox" name="toolBox5">
           <property name="currentIndex">
            <number>0</number>
@@ -1411,11 +1419,21 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
        <attribute name="title">
         <string>Cracking</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="1" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_20">
+        <item>
+         <widget class="QLabel" name="textLabel4_4_2_2_3">
+          <property name="text">
+           <string>&lt;h2&gt;Welcome in Cracking Control Panel&lt;/h2&gt;</string>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QToolBox" name="toolBox5_3">
           <property name="currentIndex">
-           <number>2</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="page1">
            <property name="geometry">
@@ -1429,7 +1447,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
            <attribute name="label">
             <string>WEP cracking</string>
            </attribute>
-           <layout class="QVBoxLayout">
+           <layout class="QVBoxLayout" name="verticalLayout_16">
             <item>
              <widget class="QGroupBox" name="groupBox1_5">
               <property name="title">
@@ -1486,8 +1504,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
            <attribute name="label">
             <string>WPA bruteforce cracking</string>
            </attribute>
-           <layout class="QGridLayout">
-            <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_18">
+            <item>
              <widget class="QGroupBox" name="groupBox1_2_3">
               <property name="title">
                <string>Normal cracking</string>
@@ -1516,23 +1534,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               </layout>
              </widget>
             </item>
-            <item row="2" column="0">
-             <spacer name="spacer33_2_3">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Expanding</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>31</width>
-                <height>200</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="1" column="0">
+            <item>
              <widget class="QGroupBox" name="groupBox1_3_3">
               <property name="title">
                <string>Pyrit cracking</string>
@@ -1571,6 +1573,22 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               </layout>
              </widget>
             </item>
+            <item>
+             <spacer name="spacer33_2_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>31</width>
+                <height>200</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </widget>
           <widget class="QWidget" name="page">
@@ -1585,8 +1603,8 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
            <attribute name="label">
             <string>WPA rainbow tables cracking</string>
            </attribute>
-           <layout class="QGridLayout">
-            <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
              <widget class="QGroupBox" name="groupBox1_3_3_2">
               <property name="title">
                <string>Rainbow Tables cracking</string>
@@ -1625,7 +1643,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
               </layout>
              </widget>
             </item>
-            <item row="1" column="0">
+            <item>
              <spacer name="spacer24">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
@@ -1645,24 +1663,14 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
           </widget>
          </widget>
         </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="textLabel4_4_2_2_3">
-          <property name="text">
-           <string>&lt;h2&gt;Welcome in Cracking Control Panel&lt;/h2&gt;</string>
-          </property>
-          <property name="wordWrap">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="TabPage">
        <attribute name="title">
         <string>Database</string>
        </attribute>
-       <layout class="QGridLayout">
-        <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_19">
+        <item>
          <widget class="QLabel" name="textLabel4">
           <property name="text">
            <string>&lt;h2&gt;KEY Database&lt;/h2&gt;</string>
@@ -1672,42 +1680,7 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
-         <layout class="QHBoxLayout">
-          <item>
-           <widget class="QPushButton" name="button_database_add">
-            <property name="text">
-             <string>Add entry</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="button_database_delete">
-            <property name="text">
-             <string>Delete entry</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="line_database"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="button_database_reload">
-            <property name="text">
-             <string>Reload</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="button_database_save">
-            <property name="text">
-             <string>Save</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="1" column="0">
+        <item>
          <widget class="QTableWidget" name="table_database">
           <property name="rowCount">
            <number>1</number>
@@ -1745,6 +1718,41 @@ Created by Emanuele `emgent` Gentili and Emanuele `crossbower` Acri from Gerix.I
            </property>
           </column>
          </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item>
+           <widget class="QPushButton" name="button_database_add">
+            <property name="text">
+             <string>Add entry</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_database_delete">
+            <property name="text">
+             <string>Delete entry</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="line_database"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_database_reload">
+            <property name="text">
+             <string>Reload</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_database_save">
+            <property name="text">
+             <string>Save</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -1907,6 +1915,78 @@ http://www.backtrack.it/~crossbower/</string>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget2</tabstop>
+  <tabstop>line_gath_logs</tabstop>
+  <tabstop>button_gath_clean</tabstop>
+  <tabstop>table_interfaces</tabstop>
+  <tabstop>button_monitor</tabstop>
+  <tabstop>button_random_mac</tabstop>
+  <tabstop>button_reload_interfaces</tabstop>
+  <tabstop>table_networks</tabstop>
+  <tabstop>button_rescan_networks</tabstop>
+  <tabstop>spin_sec</tabstop>
+  <tabstop>combo_channel</tabstop>
+  <tabstop>text_output</tabstop>
+  <tabstop>button_wep_start_sniff</tabstop>
+  <tabstop>button_wep_test_inj</tabstop>
+  <tabstop>button_wep_fake_auth_chop</tabstop>
+  <tabstop>button_wep_start_chop</tabstop>
+  <tabstop>button_wep_create_arp_chop</tabstop>
+  <tabstop>button_wep_arp_inj_chop</tabstop>
+  <tabstop>button_wep_assoc_fake_auth_frag</tabstop>
+  <tabstop>button_wep_start_frag</tabstop>
+  <tabstop>button_wep_create_arp_frag</tabstop>
+  <tabstop>button_wep_arp_inj_frag</tabstop>
+  <tabstop>button_wep_assoc_fake_auth_rep</tabstop>
+  <tabstop>button_wep_start_rep</tabstop>
+  <tabstop>button_wep_assoc_fake_auth_req</tabstop>
+  <tabstop>spin_wep_wired_req</tabstop>
+  <tabstop>spin_wep_wireless_req</tabstop>
+  <tabstop>button_wep_capture_req</tabstop>
+  <tabstop>combo_wep_mac_cfrag</tabstop>
+  <tabstop>button_wep_autoload_clients_cfrag</tabstop>
+  <tabstop>button_wep_arp_inj_cfrag</tabstop>
+  <tabstop>button_wep_start_latte</tabstop>
+  <tabstop>button_wep_start_hirte_ap</tabstop>
+  <tabstop>button_wep_start_hirte_adhoc</tabstop>
+  <tabstop>button_wpa_start_sniff</tabstop>
+  <tabstop>button_wpa_test_inj</tabstop>
+  <tabstop>combo_wpa_mac_hand</tabstop>
+  <tabstop>button_wpa_autoload_clients</tabstop>
+  <tabstop>spin_wpa_deauth_hand</tabstop>
+  <tabstop>button_wpa_deauth_hand</tabstop>
+  <tabstop>line_fake_ap_essid</tabstop>
+  <tabstop>line_fake_ap_chan</tabstop>
+  <tabstop>check_fake_ap_wep</tabstop>
+  <tabstop>radioButton13</tabstop>
+  <tabstop>radio_fake_ap_wpa</tabstop>
+  <tabstop>radio_fake_ap_wpa2</tabstop>
+  <tabstop>line_fake_ap_wep_key</tabstop>
+  <tabstop>radio_fake_ap_wep40</tabstop>
+  <tabstop>radio_fake_ap_tkip</tabstop>
+  <tabstop>radio_fake_ap_wrap</tabstop>
+  <tabstop>radio_fake_ap_ccmp</tabstop>
+  <tabstop>radio_fake_ap_wep104</tabstop>
+  <tabstop>check_fake_ap_adhoc_mode</tabstop>
+  <tabstop>check_fake_ap_hidden_ssid</tabstop>
+  <tabstop>check_fake_ap_no_broadcast</tabstop>
+  <tabstop>check_fake_ap_all_probes</tabstop>
+  <tabstop>button_fake_ap_start</tabstop>
+  <tabstop>button_crack_wep_aircrack</tabstop>
+  <tabstop>line_crack_wpa_dictionary</tabstop>
+  <tabstop>button_crack_wpa_aircrack</tabstop>
+  <tabstop>line_crack_wpa_dictionary_pyrit</tabstop>
+  <tabstop>button_crack_wpa_pyrit</tabstop>
+  <tabstop>line_crack_wpa_rainbow_tables_file</tabstop>
+  <tabstop>button_crack_wpa_rainbow_tables</tabstop>
+  <tabstop>button_database_add</tabstop>
+  <tabstop>button_database_delete</tabstop>
+  <tabstop>line_database</tabstop>
+  <tabstop>button_database_reload</tabstop>
+  <tabstop>button_database_save</tabstop>
+  <tabstop>table_database</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -1916,8 +1996,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_crack_wep_aircrack()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -1932,8 +2012,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_crack_wpa_aircrack()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -1948,8 +2028,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_crack_wpa_pyrit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>165</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -1964,8 +2044,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_crack_wpa_rainbow_tables()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -1980,8 +2060,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_fake_ap_start()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>318</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -1996,8 +2076,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_gath_clean()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>527</x>
+     <y>98</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2012,8 +2092,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_reload_interfaces()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>237</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2028,8 +2108,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_rescan_networks()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>284</x>
+     <y>440</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2044,8 +2124,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_wep_start_latte()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>40</x>
+     <y>207</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2060,8 +2140,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_test_inj()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>107</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2076,8 +2156,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_autoload_victim_clients()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2092,8 +2172,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_wpa_deauth_hand()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2108,8 +2188,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_start_sniffing()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2124,8 +2204,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_test_inj()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>120</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2140,8 +2220,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_line_wpa_mac_hand()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2156,8 +2236,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_line_crack_wpa_dictionary()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2172,8 +2252,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_line_crack_wpa_dictionary_pyrit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>165</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2188,8 +2268,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_line_crack_wpa_rainbow_tables_file()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2204,8 +2284,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_line_gath_logs()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>32</x>
+     <y>99</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2220,8 +2300,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_random_mac()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>236</x>
+     <y>237</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2236,8 +2316,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_line_database()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>52</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2252,8 +2332,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_database_delete()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>52</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2268,8 +2348,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_database_reload()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>52</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2284,8 +2364,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_database_save()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>52</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2300,8 +2380,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_database_add()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>31</x>
+     <y>52</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2316,8 +2396,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_monitor()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>441</x>
+     <y>237</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2332,8 +2412,8 @@ http://www.backtrack.it/~crossbower/</string>
    <slot>slot_start_sniffing()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>76</y>
     </hint>
     <hint type="destinationlabel">
      <x>20</x>
@@ -2357,5 +2437,88 @@ http://www.backtrack.it/~crossbower/</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>table_networks</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>Main_window</receiver>
+   <slot>slot_network_selected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>360</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>slot_wep_capture_req()</slot>
+  <slot>slot_crack_wpa_aircrack()</slot>
+  <slot>slot_crack_wpa_pyrit()</slot>
+  <slot>slot_mac_restore()</slot>
+  <slot>slot_monitor_on()</slot>
+  <slot>slot_net_map_on()</slot>
+  <slot>slot_wep_arp_inj_cfrag()</slot>
+  <slot>slot_wep_arp_inj_chop()</slot>
+  <slot>slot_wep_arp_inj_frag()</slot>
+  <slot>slot_wep_create_arp_cfrag()</slot>
+  <slot>slot_wep_create_arp_chop()</slot>
+  <slot>slot_wep_create_arp_frag()</slot>
+  <slot>slot_wep_start_chop()</slot>
+  <slot>slot_wep_start_frag()</slot>
+  <slot>slot_wep_start_rep()</slot>
+  <slot>slot_wep_test_inj()</slot>
+  <slot>slot_wpa_deauth_hand()</slot>
+  <slot>slot_wpa_start_sniff_hand()</slot>
+  <slot>slot_crack_wep_aircrack()</slot>
+  <slot>slot_crack_wpa_rainbow_tables()</slot>
+  <slot>slot_wep_start_hirte_adhoc()</slot>
+  <slot>slot_wep_start_hirte_ap()</slot>
+  <slot>slot_wep_start_latte()</slot>
+  <slot>slot_mac_change()</slot>
+  <slot>slot_gath_int()</slot>
+  <slot>slot_save_ap_name()</slot>
+  <slot>slot_save_mon()</slot>
+  <slot>slot_save_mon_mac()</slot>
+  <slot>slot_line_crack_wep_log()</slot>
+  <slot>slot_line_crack_wpa_dictionary()</slot>
+  <slot>slot_line_crack_wpa_dictionary_pyrit()</slot>
+  <slot>slot_line_crack_wpa_log_pyrit()</slot>
+  <slot>slot_line_crack_wpa_rainbow_tables_file()</slot>
+  <slot>slot_line_gath_logs()</slot>
+  <slot>slot_line_mac_change_int()</slot>
+  <slot>slot_line_mac_change_mac()</slot>
+  <slot>slot_line_wep_mac_cfrag()</slot>
+  <slot>slot_line_wpa_mac_hand()</slot>
+  <slot>slot_spin_wep_wired_req()</slot>
+  <slot>slot_spin_wep_wireless_req()</slot>
+  <slot>slot_line_wpa_deauth_hand()</slot>
+  <slot>slot_start_sniffing()</slot>
+  <slot>slot_autoload_ap_info()</slot>
+  <slot>slot_gath_clean()</slot>
+  <slot>slot_enable_ip_forward()</slot>
+  <slot>slot_fake_ap_start()</slot>
+  <slot>slot_save_ap_mac()</slot>
+  <slot>slot_save_ap_chan()</slot>
+  <slot>slot_reload_interfaces()</slot>
+  <slot>slot_autoload_victim_clients()</slot>
+  <slot>slot_rescan_networks()</slot>
+  <slot>slot_interface_selected()</slot>
+  <slot>slot_network_selected()</slot>
+  <slot>slot_disable_ip_forward()</slot>
+  <slot>slot_random_mac()</slot>
+  <slot>slot_line_database()</slot>
+  <slot>slot_database_delete()</slot>
+  <slot>slot_database_reload()</slot>
+  <slot>slot_database_save()</slot>
+  <slot>slot_database_add()</slot>
+  <slot>slot_database_changed()</slot>
+  <slot>slot_fake_auth()</slot>
+  <slot>slot_wep_client_frag()</slot>
+  <slot>slot_test_inj()</slot>
+  <slot>slot_monitor()</slot>
+ </slots>
 </ui>
