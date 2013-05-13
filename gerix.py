@@ -640,7 +640,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
     #
     def select_interface(self, interface):
         
-        numrows = self.table_interfaces.numRows()
+        numrows = self.table_interfaces.rowCount()
 
         for i in range(0, numrows):
             if str(self.table_interfaces.text(i, 0)) == interface:
@@ -655,7 +655,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
     def slot_reload_interfaces(self):
         
         # clear
-        numrows = self.table_interfaces.numRows()
+        numrows = self.table_interfaces.rowCount()
         for i in range(0, numrows):
             self.table_interfaces.removeRow(0)
         
@@ -675,12 +675,12 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
             # get mode
             mode = commands.getoutput("iwconfig " + intf[0] + " | tr ' ' '\n' | grep -i 'Mode:' | tr ':' ' ' | awk '{print $2 }'")
             # fill table
-            self.table_interfaces.insertRows(0)
-            self.table_interfaces.setText( 0, 0, intf[0])
-            self.table_interfaces.setText( 0, 1, current_mac)
-            self.table_interfaces.setText( 0, 2, intf[2])
-            self.table_interfaces.setText( 0, 3, intf[3])
-            self.table_interfaces.setText( 0, 4, mode)
+            self.table_interfaces.insertRow(0)
+            self.table_interfaces.setItem( 0, 0, QTableWidgetItem(intf[0]))
+            self.table_interfaces.setItem( 0, 1, QTableWidgetItem(current_mac))
+            self.table_interfaces.setItem( 0, 2, QTableWidgetItem(intf[2]))
+            self.table_interfaces.setItem( 0, 3, QTableWidgetItem(intf[3]))
+            self.table_interfaces.setItem( 0, 4, QTableWidgetItem(mode))
 
         self.table_interfaces.clearSelection()
 
@@ -694,7 +694,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
             return
         
         # clear
-        numrows = self.table_networks.numRows()
+        numrows = self.table_networks.rowCount()
         for i in range(0, numrows):
             self.table_networks.removeRow(0)
 
@@ -742,13 +742,18 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
             pwr     = match.group(7)
             essid   = match.group(8)
 
-            self.table_networks.insertRows(0)
-            self.table_networks.setText(0, 0, essid)
-            self.table_networks.setText(0, 1, bssid)
-            self.table_networks.setText(0, 2, channel)
-            self.table_networks.setText(0, 3, pwr)
-            self.table_networks.setText(0, 4, enc + ' ' + cipher + ' ' + auth)
-            #self.table_networks.setText(0, 5, mb)
+            self.table_networks.insertRow(0)
+            self.table_networks.setItem(0, 0, QtGui.QTableWidgetItem(essid, 0))
+            self.table_networks.setItem(0, 1, QtGui.QTableWidgetItem(bssid, 0))
+            self.table_networks.setItem(0, 2, QtGui.QTableWidgetItem(channel, 0))
+            self.table_networks.setItem(0, 3, QtGui.QTableWidgetItem(pwr, 0))
+            self.table_networks.setItem(0, 4, QtGui.QTableWidgetItem(enc + ' ' + cipher + ' ' + auth, 0))
+            #self.table_networks.setText(0, 0, essid)
+            #self.table_networks.setText(0, 1, bssid)
+            #self.table_networks.setText(0, 2, channel)
+            #self.table_networks.setText(0, 3, pwr)
+            #self.table_networks.setText(0, 4, enc + ' ' + cipher + ' ' + auth)
+            ##self.table_networks.setText(0, 5, mb)
 
         self.table_networks.clearSelection()
         commands.getstatusoutput('rm /tmp/gerix-scan*')
@@ -785,7 +790,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
         key = commands.getoutput("cat " + aircrack_log + " | grep 'KEY FOUND' | tr '[]' '\n' | egrep '([a-fA-F0-9]:)+' | tr -d ' \t'")
 
         # insert a row in the database
-        self.table_database.insertRows(0)
+        self.table_database.insertRow(0)
         self.table_database.setText(0, 0, self.essid)
         self.table_database.setText(0, 1, self.ac)
         self.table_database.setText(0, 2, self.canale)
@@ -808,7 +813,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
     # Add an entry to the database table
     #
     def slot_database_add(self):
-        self.table_database.insertRows(0)
+        self.table_database.insertRow(0)
 
 
     #
@@ -839,7 +844,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
         c.execute('''create table if not exists keys (essid text, bssid text, channel text, key text)''')
 
         # clear GUI table
-        numrows = self.table_database.numRows()
+        numrows = self.table_database.rowCount()
         for i in range(0, numrows):
             self.table_database.removeRow(0)
 
@@ -852,7 +857,7 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
             key     = row[3]
             ascii   = key_to_ascii(key)
 
-            self.table_database.insertRows(0)
+            self.table_database.insertRow(0)
             self.table_database.setText(0, 0, essid)
             self.table_database.setText(0, 1, bssid)
             self.table_database.setText(0, 2, channel)
@@ -882,13 +887,13 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
         c.execute('''create table keys (essid text, bssid text, channel text, key text)''')
 
         # read GUI table
-        numrows = self.table_database.numRows()
+        numrows = self.table_database.rowCount()
 
         for i in range(0, numrows):
-            essid   = str(self.table_database.text(i, 0))
-            bssid   = str(self.table_database.text(i, 1))
-            channel = str(self.table_database.text(i, 2))
-            key     = str(self.table_database.text(i, 3))
+            essid   = str(self.table_database.item(i, 0).text())
+            bssid   = str(self.table_database.item(i, 1).text())
+            channel = str(self.table_database.item(i, 2).text())
+            key     = str(self.table_database.item(i, 3).text())
 
             c.execute("insert into keys values ('" + essid + "', '" + bssid + "', '" + channel + "', '" + key + "')")
 
@@ -922,10 +927,10 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
             self.intf_mode  = ''
             return
 
-        self.periferica = str(self.table_interfaces.text(selrow, 0))
-        self.mymon      = str(self.table_interfaces.text(selrow, 0))
-        self.mymac      = str(self.table_interfaces.text(selrow, 1))
-        self.intf_mode  = str(self.table_interfaces.text(selrow, 4))
+        self.periferica = str(self.table_interfaces.item(selrow, 0).text())
+        self.mymon      = str(self.table_interfaces.item(selrow, 0).text())
+        self.mymac      = str(self.table_interfaces.item(selrow, 1).text())
+        self.intf_mode  = str(self.table_interfaces.item(selrow, 4).text())
 
         #self.change_mac_int = self.mymon
         #self.line_mac_change_int.setText(self.mymon)
@@ -937,9 +942,9 @@ class Main_window_ex(QMainWindow, Ui_Main_window):
         if selrow == -1:
             return
 
-        self.essid  = str(self.table_networks.text(selrow, 0))
-        self.ac     = str(self.table_networks.text(selrow, 1))
-        self.canale = str(self.table_networks.text(selrow, 2))
+        self.essid  = str(self.table_networks.item(selrow, 0).text())
+        self.ac     = str(self.table_networks.item(selrow, 1).text())
+        self.canale = str(self.table_networks.item(selrow, 2).text())
 
         #print self.essid + " " + self.ac + " " + self.canale
     
@@ -1137,7 +1142,7 @@ def main():
     main_window.show()
 
     # launch the GUI
-    app.exec_loop()
+    app.exec_()
 
     # config end function
     config_end()
